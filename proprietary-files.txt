@@ -1,4 +1,4 @@
-# put anything that cannot be in d2-common
+# put anything that cannot be in apexq-common
 # Radio
 lib/libril-qc-qmi-1.so
 lib/libril.so

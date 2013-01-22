@@ -265,3 +265,10 @@ service bugreport /system/bin/bugmailer.sh -v
 	oneshot
 	keycodes 114 115 116
 
+#Sensor Property
+#Magnetic compass calibration from stock init.carrier.rc
+
+on property:ro.yas_softiron.apexqtmo=true
+  write /sys/class/input/input3/ellipsoid_mode 0
+write /sys/class/input/input3/static_matrix "10319 -477 45 -147 9510 171 -170 52 10187"\
+

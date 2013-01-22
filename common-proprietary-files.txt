@@ -7,11 +7,6 @@ etc/thermald-8064.conf
 etc/thermald-8930.conf
 etc/thermald-8960.conf
 
-# Bluetooth firmware
-bin/bcm4334.hcd
-bin/bcm4334_murata.hcd
-bin/bcm4334_semco.hcd
-
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
@@ -41,6 +36,7 @@ etc/firmware/a225_pm4.fw
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/a225p5_pm4.fw
+etc/firmware/cyttsp_8960_cdp.hex
 etc/firmware/vidc_1080p.fw
 
 # Graphics
@@ -76,8 +72,8 @@ lib/libqmi_client_qmux.so
 lib/libloc_api_v02.so
 
 # NFC
-lib/hw/nfc.MSM8960.so
-#vendor/firmware/libpn544_fw.so
+lib/hw/nfc.MSM8260A.so
+vendor/firmware/libpn544_fw.so
 
 # Sensors
 lib/hw/sensors.msm8960.so
@@ -107,19 +103,13 @@ lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_ov2720_default_video.so
 lib/libchromatix_ov2720_preview.so
-lib/libchromatix_s5k6a3yx_default_video.so
-lib/libchromatix_s5k6a3yx_preview.so
-lib/libchromatix_s5k6a3yx_vt_hd.so
-lib/libchromatix_s5k6a3yx_vt.so
+# there are also "fps" libs on the device
+lib/libchromatix_s5k3l1yx_default_video.so
+lib/libchromatix_s5k3l1yx_preview.so
+lib/libchromatix_s5k3l1yx_video_hd.so
+lib/libchromatix_s5k3l1yx_zsl.so
 
 # Camera firmware
-cameradata/SlimISP_GC.bin
-cameradata/SlimISP_GD.bin
-cameradata/SlimISP_GE.bin
-cameradata/SlimISP_GH.bin
-cameradata/SlimISP_ZC.bin
-cameradata/SlimISP_ZD.bin
-cameradata/SlimISP_ZE.bin
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 
@@ -128,15 +118,14 @@ lib/libdiag.so
 
 # Wi-Fi
 bin/macloader
-etc/wifi/bcmdhd_apsta.bin_b2
-etc/wifi/bcmdhd_p2p.bin_b2
-etc/wifi/bcmdhd_sta.bin_b2
-etc/wifi/bcmdhd_mfg.bin_b2
-etc/wifi/nvram_mfg.txt
-etc/wifi/nvram_mfg.txt_murata
-etc/wifi/nvram_net.txt
-etc/wifi/nvram_net.txt_murata
 etc/wifi/wpa_supplicant.conf
+etc/firmware/wcnss.b00
+etc/firmware/wcnss.b01
+etc/firmware/wcnss.b02
+etc/firmware/wcnss.b04
+etc/firmware/wcnss.mdt
+etc/firmware/wlan/prima/WCNSS_cfg.dat
+etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 
 # Perf

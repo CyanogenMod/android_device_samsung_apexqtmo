@@ -34,7 +34,7 @@ for FILE in `egrep -v '(^#|^$)' ../$DEVICE/device-proprietary-files.txt`; do
   fi
 done
 
-for FILE in `egrep -v '(^#|^$)' ../d2-common/proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../apexq-common/proprietary-files.txt`; do
   echo "Extracting /system/$FILE ..."
   DIR=`dirname $FILE`
   if [ ! -d $BASE/$DIR ]; then
@@ -47,9 +47,9 @@ for FILE in `egrep -v '(^#|^$)' ../d2-common/proprietary-files.txt`; do
   fi
 done
 
-BASE=../../../vendor/$VENDOR/d2-common/proprietary
+BASE=../../../vendor/$VENDOR/apexq-common/proprietary
 rm -rf $BASE/*
-for FILE in `egrep -v '(^#|^$)' ../d2-common/common-proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../apexq-common/common-proprietary-files.txt`; do
   echo "Extracting /system/$FILE ..."
   DIR=`dirname $FILE`
   if [ ! -d $BASE/$DIR ]; then
@@ -62,4 +62,4 @@ for FILE in `egrep -v '(^#|^$)' ../d2-common/common-proprietary-files.txt`; do
   fi
 done
 
-./../d2-common/setup-makefiles.sh
+./../apexq-common/setup-makefiles.sh
