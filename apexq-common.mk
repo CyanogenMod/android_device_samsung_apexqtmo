@@ -34,7 +34,9 @@ TARGET_SCREEN_WIDTH := 480
 PRODUCT_COPY_FILES += \
         device/samsung/apexq-common/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
         device/samsung/apexq-common/audio/audio_policy.conf:system/etc/audio_policy.conf \
-        device/samsung/apexq-common/audio/audio_effects.conf:system/etc/audio_effects.conf
+        device/samsung/apexq-common/audio/audio_effects.conf:system/etc/audio_effects.conf \
+	device/samsung/apexq-common/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
+	device/samsung/apexq-common/keychars/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm
 
 # Ramdisk
 PRODUCT_PACKAGES += \
