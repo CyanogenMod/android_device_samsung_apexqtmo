@@ -2694,7 +2694,7 @@ SectionDevice
     Comment "Handset Rx device for voice call"
 
     EnableSequence
-        'SLIMBUS_0_RX Channels':0:One
+        'SLIM_0_RX Channels':0:One
         'RX1 MIX1 INP1':0:RX1
         'EAR PA Gain':0:POS_2_DB
         'DAC1 Switch':1:1
@@ -3413,24 +3413,20 @@ SectionDevice
 	Comment "Dual MIC Endfire Tx device"
 
     EnableSequence
-        'SLIMBUS_0_TX Channels':0:Two
-        'SLIM TX8 MUX':0:DEC3
-        'DEC3 MUX':0:ADC4
-        'ADC4 Volume':1:100%
+        'SLIM_0_TX Channels':0:One
         'SLIM TX7 MUX':0:DEC4
         'DEC4 MUX':0:ADC3
         'ADC3 Volume':1:100%
+	'DEC4 Volume':1:67%
         'MICBIAS1 CAPLESS Switch':1:1
     EndSequence
 
     DisableSequence
-        'SLIM TX7 MUX':0:ZERO
-        'DEC3 MUX':0:ZERO
-        'ADC4 Volume':1:0
-        'SLIM TX8 MUX':0:ZERO
-        'DEC4 MUX':0:ZERO
-        'ADC3 Volume':1:0
-        'MICBIAS1 CAPLESS Switch':1:0
+	'SLIM TX7 MUX':0:ZERO
+	'DEC4 MUX':0:ZERO
+	'ADC3 Volume':1:0
+	'DEC4 Volume':1:67%
+	'MICBIAS1 CAPLESS Switch':1:0
     EndSequence
 
     ACDBID  52:2
@@ -4830,13 +4826,15 @@ SectionModifier
 	Name "Play Voice"
 
 	EnableSequence
-		'SLIMBUS_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIMBUS_0_TX_Voice':1:1
+		'EAR PA Gain':0:POS_2_DB
+		'RX1 Digital Volume':1:69%
+		'SLIM_0_RX_Voice Mixer CSVoice':1:1
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
 	EndSequence
 
 	DisableSequence
-		'SLIMBUS_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIMBUS_0_TX_Voice':1:0
+		'SLIM_0_RX_Voice Mixer CSVoice':1:0
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
 	EndSequence
 
 	# ALSA PCMs
