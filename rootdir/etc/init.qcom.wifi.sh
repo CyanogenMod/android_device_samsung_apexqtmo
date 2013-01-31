@@ -39,14 +39,14 @@ case "$target" in
     msm8960* | jaguar* | m2*)
         # The property below is used in Qcom SDK for softap to determine
         # the wifi driver config file
-        setprop wlan.driver.config /system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+        setprop wlan.driver.config /data/misc/wifi/WCNSS_qcom_cfg.ini
         # We need to set up some symlinks for Prima to work                     
         mount -o remount,rw /dev/block/mmcblk0p14 /system                       
         rm /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin               
         ln -s /persist/WCNSS_qcom_wlan_nv.bin /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
                                                                                 
-        #rm /system/lib/modules/wlan.ko                                          
-        #ln -s /system/lib/modules/prima/prima_wlan.ko /system/lib/modules/wlan.ko
+        rm /system/lib/modules/wlan.ko                                          
+        ln -s /system/lib/modules/prima/prima_wlan.ko /system/lib/modules/wlan.ko
         sync                                                         
         mount -o remount,ro /dev/block/mmcblk0p14 /system
 
