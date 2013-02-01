@@ -40,7 +40,6 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    prima_wlan.ko \
     init.qcom.wifi.sh \
     fstab.qcom \
     initlogo.rle \
