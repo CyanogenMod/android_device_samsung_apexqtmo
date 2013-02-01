@@ -142,6 +142,10 @@ on boot
     #For bridgemgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
+    # Fix permissions on camera flash control
+    chmod 0660 /sys/devices/virtual/camera/rear/rear_flash
+    chown root camera /sys/devices/virtual/camera/rear/rear_flash
+
     #To allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
