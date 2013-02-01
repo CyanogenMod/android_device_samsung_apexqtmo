@@ -19,7 +19,7 @@
 <resources>
 
     <!-- Workspace grid size -->
-    <integer name="default_cell_count_y">5</integer>
-    <integer name="default_cell_count_x">4</integer>
+    <!--<integer name="default_cell_count_y">5</integer>
+    <integer name="default_cell_count_x">4</integer> -->
 
 </resources>
