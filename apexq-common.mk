@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += qrngd
 
 #common build.props
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.hsxpa=5 \
+    ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
     persist.radio.add_power_save=1 \
     persist.radio.snapshot_disabled=1 \
