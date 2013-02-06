@@ -127,6 +127,12 @@ etc/firmware/wcnss.mdt
 etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
+#Bluetooth
+bin/hciattach
+bin/hci_qcomm_init
+bin/LE_dut
+bin/qcom_audio_dut
+bin/qcom_dut
 
 # Perf
 lib/libqc-opt.so

@@ -26,7 +26,7 @@
 #
 
 import init.qcom.usb.rc
-import init.qcom.wifi.sh
+import init.bt.rc
 
 on init
     # Set permissions for persist partition
