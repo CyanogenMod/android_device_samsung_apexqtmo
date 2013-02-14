@@ -38,8 +38,9 @@ PRODUCT_COPY_FILES += \
 
 # Hardware keyboard
 PRODUCT_COPY_FILES += \
-	device/samsung/apexq-common/keylayout/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
-	device/samsung/apexq-common/keychars/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm
+	device/samsung/apexq-common/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
+	device/samsung/apexq-common/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
+        device/samsung/apexq-common/keyboard/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
