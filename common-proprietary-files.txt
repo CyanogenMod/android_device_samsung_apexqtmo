@@ -10,6 +10,9 @@ etc/thermald-8960.conf
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libaudioalsa.so
+lib/libaudioparsers.so
+lib/libcsd-client.so
 
 # mmparser extended
 lib/libmmparser.so
