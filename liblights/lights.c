@@ -161,8 +161,6 @@ set_light_buttons(struct light_device_t* dev,
 
     pthread_mutex_lock(&g_lock);
     err = write_int(BUTTON_FILE, on?255:0);
-    //temporary hack until keyboard backlight support added to CM-10.1
-    err = write_int(KEYBOARD_FILE, on?255:0);
     pthread_mutex_unlock(&g_lock);
 
     return err;
