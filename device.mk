@@ -19,6 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 
+## blobs
+$(call inherit-product, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
@@ -35,8 +38,8 @@ PRODUCT_COPY_FILES += \
 
 # Hardware keyboard
 PRODUCT_COPY_FILES += \
-	device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
-	device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
+    device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
+    device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
     device/samsung/apexqtmo/keyboard/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
 # Ramdisk
