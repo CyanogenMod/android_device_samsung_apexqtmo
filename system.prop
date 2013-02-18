@@ -1,0 +1,155 @@
+# system.prop for SGH-T699
+#
+
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+dev.pm.dyn_samplingrate=1
+
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-fma2dp=false
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+
+# these were both true in stock
+lpa.decode=false
+lpa.use-stagefright=false
+
+#
+# system props for the data modules
+#
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=16
+mobiledata.interfaces=rmnet0
+
+#
+# system props for SD card emulation of emmc partition
+#
+ro.emmc.sdcard.partition=17
+
+#system props for time-services
+persist.timed.enable=true
+
+# System props for audio
+persist.audio.fluence.mode=endfire
+persist.audio.vr.enable=false
+persist.audio.handset.mic=digital
+persist.audio.speaker.location=high
+
+#
+# system prop for opengles version
+#
+# 131072 is decimal for 0x20000 to report version 2
+ro.opengles.version=131072
+
+#
+# System prop for sending transmit power request to RIL during WiFi hotspot on/off
+#
+ro.ril.transmitpower=true
+
+#
+# Needed to match behavior of stock rom
+#      D/PHONE: mDoesRilSendMultipleCallRing=false
+#
+ro.telephony.call_ring.multiple=0
+
+ro.sf.lcd_density=240
+
+#system prop for switching gps driver to qmi
+persist.gps.qmienabled=true
+
+# Fields for custom RIL
+# MAX PROP NAME is 31 chars --|
+ro.telephony.ril_class=SamsungQualcommD2RIL
+# TODO FO if this is right for this board
+telephony.lteOnGsmDevice=1
+
+# Property to allow IccCard to properly handle APPSTATE_SUBSCRIPTION_PERSO
+ro.telephony.ril.v3=qcomuiccstack
+
+# System property for SIM
+persist.radio.apm_sim_not_pwdn=1
+
+# System property for sys info indication
+persist.radio.add_power_save=1
+
+# System propverty snapshot disable
+persist.radio.snapshot_disabled=1
+
+# qcom display options
+debug.enabletr=true
+com.qc.hardware=true
+ro.sf.compbypass.enable=1
+com.qc.hdmi_out=true
+ro.hdmi.enable=true
+debug.sf.hw=1
+# from stock rom
+## note: also listed as perf upgrade in CM10 http://forum.xda-developers.com/showthread.php?t=1904827
+debug.egl.hw=1
+#
+debug.composition.type=dyn
+
+## from stock ROM, TBD whether to keep
+#TODO FO WTF these do?
+#DEVICE_PROVISIONED=1
+#dev.sfbootcomplete=0
+
+##NOTE: might be related to symlink to /persist firmware
+#camera changes..r.mewar
+persist.sys.camera.connect=0
+persist.sys.camera.transform=0
+persist.sys.storage_preload=1
+# 
+# system prop for Bluetooth Dialup Networking (from stock)
+#
+ro.qualcomm.bluetooth.dun=false
+
+# system prop for Bluetooth FTP profile
+ro.qualcomm.bluetooth.ftp=false
+#
+# system property for Bluetooth Handsfree Profile Wide Band Speech
+#
+ro.qualcomm.bluetooth.hfp.wbs=false
+#
+#system prop for Bluetooth hci transport
+ro.qualcomm.bt.hci_transport=smd
+#
+# system prop for requesting Master role in incoming Bluetooth connection.
+#
+ro.bluetooth.request.master=true                                                
+#
+# system prop for Bluetooth Auto connect for remote initated connections
+#
+ro.bluetooth.remote.autoconnect=true
+# system property for Bluetooth discoverability time out in seconds
+# 0: Always discoverable
+#debug.bt.discoverable_time=0
+
+
+# from stock "ADDITIONAL_BUILD_PROPERTIES"
+
+# System property for cabl               
+## FO What Cabl is
+ro.qualcomm.cabl=0
+
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1
+
+#-ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+#ro.yas-selftest.enable=true                                                     
+ro.yas_softiron.apexqtmo=true
+

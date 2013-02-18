@@ -25,26 +25,33 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
+# inherit from the proprietary version
+-include vendor/samsung/apexqtmo/BoardConfigVendor.mk
 # inherit from common msm8960
 -include device/samsung/msm8960-common/BoardConfigCommon.mk
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := apexqtmo
+
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
+TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
 BOARD_KERNEL_BASE           := 0x80200000
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01300000
+BOARD_FORCE_RAMDISK_ADDRESS := 0x81500000
+BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01300000
 BOARD_KERNEL_PAGESIZE       := 2048
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8260A
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apexq-common/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/apexqtmo/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/apexq-common/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/apexqtmo/recovery.fstab
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
@@ -54,8 +61,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651290624
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/apexq-common/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/apexq-common/bluetooth/vnd_apexq.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/apexqtmo/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/apexqtmo/bluetooth/vnd_apexq.txt
 BOARD_HAVE_BLUETOOTH_BCM :=
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true

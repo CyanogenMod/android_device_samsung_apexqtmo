@@ -16,11 +16,8 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/apexq-common/apexq-common-vendor.mk)
-
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/apexq-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
@@ -32,15 +29,15 @@ TARGET_SCREEN_WIDTH := 480
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-        device/samsung/apexq-common/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
-        device/samsung/apexq-common/audio/audio_policy.conf:system/etc/audio_policy.conf \
-        device/samsung/apexq-common/audio/audio_effects.conf:system/etc/audio_effects.conf
+    device/samsung/apexqtmo/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/samsung/apexqtmo/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/samsung/apexqtmo/audio/audio_effects.conf:system/etc/audio_effects.conf
 
 # Hardware keyboard
 PRODUCT_COPY_FILES += \
-	device/samsung/apexq-common/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
-	device/samsung/apexq-common/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
-        device/samsung/apexq-common/keyboard/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
+	device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
+	device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
+    device/samsung/apexqtmo/keyboard/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -59,7 +56,7 @@ PRODUCT_PACKAGES += Torch
 
 # Vold configuration
 PRODUCT_COPY_FILES += \
-    device/samsung/apexq-common/vold.fstab:system/etc/vold.fstab
+    device/samsung/apexqtmo/vold.fstab:system/etc/vold.fstab
 
 # Wifi
 PRODUCT_PACKAGES += \
