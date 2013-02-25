@@ -61,6 +61,11 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/vold.fstab:system/etc/vold.fstab
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8960 \
+    libmmcamera_interface2
+
 # Wifi
 PRODUCT_PACKAGES += \
     libnetcmdiface
