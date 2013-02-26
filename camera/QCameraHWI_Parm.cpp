@@ -21,7 +21,7 @@
 
 #include <utils/Errors.h>
 #include <utils/threads.h>
-//#include <binder/MemoryHeapPmem.h>
+#include <binder/MemoryHeapPmem.h>
 #include <utils/String16.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -60,6 +60,7 @@ extern "C" {
 #include <sys/time.h>
 #include <stdlib.h>
 #include <linux/ion.h>
+#include "QCamera_Intf.h"
 
 } // extern "C"
 

@@ -30,10 +30,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef MM_JPEG_ENCODER_H
 #define MM_JPEG_ENCODER_H
 #include <linux/ion.h>
-#include "camera.h"
-#include "jpege.h"
-#include "exif.h"
-#include "camera_defs_i.h"
+#include "QCamera_Intf.h"
+//#include "jpege.h"
+//#include "exif.h"
+//#include "camera_defs_i.h"
 
 extern void mm_jpege_event_handler(void*, jpeg_event_t event, void *p_arg);
 

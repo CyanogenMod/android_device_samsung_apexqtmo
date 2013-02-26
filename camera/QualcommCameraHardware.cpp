@@ -25,8 +25,8 @@
 #include <utils/Errors.h>
 #include <utils/threads.h>
 
-#if 0
 #include <binder/MemoryHeapPmem.h>
+#if 0
 #include <binder/MemoryHeapIon.h>
 #endif
 #include <camera/Camera.h>
@@ -72,7 +72,7 @@ extern "C" {
 #include <stdlib.h>
 
 
-#include <camera.h>
+#include "QCamera_Intf.h"
 #include <cam_fifo.h>
 #include <liveshot.h>
 #include <jpege.h>

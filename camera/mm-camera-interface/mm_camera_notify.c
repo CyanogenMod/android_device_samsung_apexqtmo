@@ -36,6 +36,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <fcntl.h>
 #include <poll.h>
 #include <linux/ion.h>
+#include "QCamera_Intf.h"
 #include "mm_camera_interface2.h"
 #include "mm_camera.h"
 
