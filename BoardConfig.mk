@@ -23,6 +23,7 @@
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
+USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
 -include vendor/samsung/apexqtmo/BoardConfigVendor.mk
@@ -98,8 +99,4 @@ WIFI_DRIVER_FW_PATH_PARAM   :=
 WIFI_DRIVER_FW_PATH_STA     := "sta"
 WIFI_DRIVER_FW_PATH_AP      := "ap"
 WIFI_DRIVER_FW_PATH_P2P     :=
-
-# Camera
-USE_CAMERA_STUB := false
-TARGET_PROVIDES_CAMERA_HAL := true
 
