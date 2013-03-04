@@ -44,15 +44,17 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.wifi.sh \
     fstab.qcom \
     initlogo.rle \
-    init.bt.rc \
     init.qcom.bt.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    hci_qcomm_init
 
 # Torch
 PRODUCT_PACKAGES += Torch

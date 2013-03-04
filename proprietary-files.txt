@@ -96,7 +96,9 @@ bin/mm-qcamera-daemon
 lib/hw/camera.msm8960.so
 lib/libmmjpeg.so
 lib/libmmstillomx.so
+lib/libimage-jpeg-dec-omx-comp.so
 lib/libimage-jpeg-enc-omx-comp.so
+lib/libimage-omx-common.so
 lib/libvdis.so
 lib/libsecnativefeature.so
 lib/libgemini.so
@@ -133,13 +135,7 @@ etc/firmware/wcnss.b04
 etc/firmware/wcnss.mdt
 etc/firmware/wlan/prima/WCNSS_cfg.dat
 etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-
-#Bluetooth
-bin/hciattach
-bin/hci_qcomm_init
-bin/LE_dut
-bin/qcom_audio_dut
-bin/qcom_dut
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Perf
 lib/libqc-opt.so

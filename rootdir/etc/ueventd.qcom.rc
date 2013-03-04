@@ -178,8 +178,6 @@
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 #permissions for sensors
 /dev/msm_dsps             0660  system       system
-# permissions for camera flash
-/sys/devices/virtual/camera/rear/rear_flash	0660	root	camera
 
 #for sensor
 /dev/mpu            0660  system       system
