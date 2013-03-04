@@ -3205,6 +3205,32 @@ SectionDevice
 EndSection
 
 SectionDevice
+    Name "Speaker DMIC Stereo"
+    Comment "Camcorder Tx device"
+
+    EnableSequence
+        'SLIM_0_TX Channels':0:One
+        'SLIM TX7 MUX':0:DEC4
+        'DEC4 MUX':0:ADC3
+        'ADC3 Volume':1:100%
+        'DEC4 Volume':1:67.7%
+        'MICBIAS1 CAPLESS Switch':1:1
+    EndSequence
+
+    DisableSequence
+        'SLIM TX7 MUX':0:ZERO
+        'DEC4 MUX':0:ZERO
+        'ADC3 Volume':1:0
+        'MICBIAS1 CAPLESS Switch':1:0
+    EndSequence
+
+    ACDBID  54:2
+
+    EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "TTY Handset Analog Tx"
 	#lbcoder skip: TTY no way to test
 	Comment "TTY Handset Analog Tx device"
