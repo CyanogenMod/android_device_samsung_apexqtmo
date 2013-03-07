@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
     device/samsung/apexqtmo/keyboard/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
+# Overwrite msm8960-common media profiles
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/configs/media_profiles.xml/:system/etc/media_profiles.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
