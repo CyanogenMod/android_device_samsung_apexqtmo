@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 
 # Overwrite msm8960-common media profiles
 PRODUCT_COPY_FILES += \
-    device/samsung/apexqtmo/configs/media_profiles.xml/:system/etc/media_profiles.xml
+    device/samsung/apexqtmo/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
