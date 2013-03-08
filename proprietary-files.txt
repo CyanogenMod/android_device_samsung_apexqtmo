@@ -13,8 +13,6 @@ lib/libaudcal.so
 lib/libaudioalsa.so
 lib/libaudioparsers.so
 lib/libcsd-client.so
-etc/firmware/wcd9310/wcd9310_anc.bin
-etc/firmware/wcd9310/wcd9310_mbhc.bin
 
 # mmparser extended
 lib/libmmparser.so
