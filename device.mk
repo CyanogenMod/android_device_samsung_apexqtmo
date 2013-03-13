@@ -47,18 +47,20 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    initlogo.rle \
-    init.qcom.bt.sh \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.target.rc \
-    ueventd.qcom.rc
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/rootdir/init.qcom.rc:root/init.qcom.rc \
+    device/samsung/apexqtmo/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/apexqtmo/rootdir/fstab.qcom:root/fstab.qcom \
+    device/samsung/apexqtmo/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    device/samsung/apexqtmo/rootdir/init.target.rc:root/init.target.rc \
+    device/samsung/apexqtmo/rootdir/initlogo.rle:root/initlogo.rle
+
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     hci_qcomm_init
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/configs/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 
 # Torch
 PRODUCT_PACKAGES += Torch
