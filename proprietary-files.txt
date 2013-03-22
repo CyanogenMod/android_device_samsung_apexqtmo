@@ -125,6 +125,10 @@ cameradata/datapattern_front_420sp.yuv
 # General
 lib/libdiag.so
 
+# Bluetooth
+bin/btnvtool
+bin/hci_qcomm_init
+
 # Wi-Fi
 bin/macloader
 etc/wifi/wpa_supplicant.conf
