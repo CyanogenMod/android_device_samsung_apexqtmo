@@ -73,7 +73,7 @@ persist.gps.qmienabled=true
 
 # Fields for custom RIL
 # MAX PROP NAME is 31 chars --|
-ro.telephony.ril_class=SamsungQualcommD2RIL
+ro.telephony.ril_class=SamsungQualcommUiccRIL
 # TODO FO if this is right for this board
 telephony.lteOnGsmDevice=1
 
