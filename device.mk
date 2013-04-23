@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += lights.msm8960
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
 
+# Increase the HWUI font cache since we have tons of RAM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hwui.text_cache_width=2048
+
 # QRNGD
 PRODUCT_PACKAGES += qrngd
 
