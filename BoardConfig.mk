@@ -25,6 +25,11 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
+# Temporary GPS fix. Must be called here as it fixes GPS called from
+# MSM8960-common. Works in conjunction with older d2 GPS blob
+
+common_flags += -DSET_PRIVACY
+
 # inherit from the proprietary version
 -include vendor/samsung/apexqtmo/BoardConfigVendor.mk
 # inherit from common msm8960
