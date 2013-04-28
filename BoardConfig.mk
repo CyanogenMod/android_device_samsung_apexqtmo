@@ -23,6 +23,8 @@
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
+
+common_flags += -DSET_PRIVACY
 USE_CAMERA_STUB := true
 
 # Temporary GPS fix. Must be called here as it fixes GPS called from
