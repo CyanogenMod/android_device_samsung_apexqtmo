@@ -34,6 +34,8 @@ USE_CAMERA_STUB := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := apexqtmo
 
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/apexqtmo/include
+
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
