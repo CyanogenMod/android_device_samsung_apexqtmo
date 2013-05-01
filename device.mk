@@ -69,13 +69,15 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
     device/samsung/apexqtmo/rootdir/init.target.rc:root/init.target.rc \
     device/samsung/apexqtmo/rootdir/initlogo.rle:root/initlogo.rle
+    device/samsung/apexqtmo/rootdir/etc/init.qcom.mdm_links.sh:system/etc/init.qcom.mdm_links.sh \
+    device/samsung/apexqtmo/rootdir/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh
 
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     hci_qcomm_init
 PRODUCT_COPY_FILES += \
-    device/samsung/apexqtmo/configs/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+    device/samsung/apexqtmo/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 
 # GPS
 PRODUCT_PACKAGES += \
