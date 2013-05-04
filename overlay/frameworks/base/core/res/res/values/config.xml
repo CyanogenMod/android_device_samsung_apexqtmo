@@ -328,4 +328,7 @@
     <!-- If true, adds support for no delay A2DP in Samsung devices -->
     <bool name="config_noDelayInATwoDP">true</bool>
 
+    <!-- Panel auto brightness value -->
+    <integer name="config_panelAutoBrightnessValue">1</integer>
+
 </resources>
