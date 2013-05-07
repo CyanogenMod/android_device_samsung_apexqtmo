@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 #Thermal Daemon hack
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/configs/thermald.conf:system/etc/thermald.conf \
-    device/samsung/apexqtmo/configs/thermald-8960.conf:system/etc/thermald-8960.conf \
+    device/samsung/apexqtmo/configs/thermald-8960.conf:system/etc/thermald-8960.conf
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
