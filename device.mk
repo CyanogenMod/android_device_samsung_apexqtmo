@@ -46,6 +46,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+#Thermal Daemon hack
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/configs/thermald.conf:system/etc/thermald.conf \
+    device/samsung/apexqtmo/configs/thermald-8960.conf:system/etc/thermald-8960.conf \
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/rootdir/init.qcom.rc:root/init.qcom.rc \
