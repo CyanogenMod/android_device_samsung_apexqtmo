@@ -3166,7 +3166,7 @@ SectionDevice
         'MICBIAS1 CAPLESS Switch':1:0
     EndSequence
 
-    ACDBID  54:2
+    ACDBID  4:2
 
 	EffectsMixerCTL "SRS TruMedia"
 
