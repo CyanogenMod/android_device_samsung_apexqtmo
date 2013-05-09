@@ -91,7 +91,8 @@ debug.enabletr=true
 com.qc.hardware=true
 ro.sf.compbypass.enable=1
 com.qc.hdmi_out=true
-ro.hdmi.enable=true
+# ro.hdmi.enable is unused in CM
+#ro.hdmi.enable=true
 debug.sf.hw=1
 # from stock rom
 ## note: also listed as perf upgrade in CM10 http://forum.xda-developers.com/showthread.php?t=1904827
