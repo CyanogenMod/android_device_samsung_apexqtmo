@@ -98,10 +98,10 @@ BOARD_HAS_QCOM_WLAN := true
 
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
 WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
-#WIFI_DRIVER_MODULE_ARG      :=
-#WIFI_DRIVER_MODULE_AP_ARG   :=
-#WIFI_DRIVER_FW_PATH_PARAM   :=
-#WIFI_DRIVER_FW_PATH_STA     := "sta"
-#WIFI_DRIVER_FW_PATH_AP      := "ap"
-#WIFI_DRIVER_FW_PATH_P2P     :=
+WIFI_DRIVER_MODULE_ARG      :=
+WIFI_DRIVER_MODULE_AP_ARG   :=
+WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
+WIFI_DRIVER_FW_PATH_STA     :=
+WIFI_DRIVER_FW_PATH_AP      :=
+WIFI_DRIVER_FW_PATH_P2P     :=
 
