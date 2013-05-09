@@ -552,15 +552,16 @@ on property:bluetooth.hciattach=true
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-service time_daemon /system/bin/time_daemon
-    class late_start
-    user root
-    group root
-    oneshot
-    disabled
+# Used in stock to set system time, not needed in CM
+#service time_daemon /system/bin/time_daemon
+#    class late_start
+#    user root
+#    group root
+#    oneshot
+#    disabled
 
-on property:persist.timed.enable=true
-    start time_daemon
+#on property:persist.timed.enable=true
+#    start time_daemon
 
 service ril-daemon /system/bin/rild
     class main
