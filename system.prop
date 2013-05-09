@@ -25,8 +25,8 @@ media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 
 # these were both true in stock
-lpa.decode=false
-lpa.use-stagefright=false
+lpa.decode=true
+lpa.use-stagefright=true
 
 #
 # system props for the data modules
