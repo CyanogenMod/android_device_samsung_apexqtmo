@@ -24,7 +24,6 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-common_flags += -DSET_PRIVACY
 USE_CAMERA_STUB := true
 
 # Temporary GPS fix. Must be called here as it fixes GPS called from
@@ -106,4 +105,6 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_FW_PATH_STA     :=
 WIFI_DRIVER_FW_PATH_AP      :=
 WIFI_DRIVER_FW_PATH_P2P     :=
+
+COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
 
