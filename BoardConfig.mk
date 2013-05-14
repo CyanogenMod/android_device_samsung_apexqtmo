@@ -26,11 +26,6 @@
 
 USE_CAMERA_STUB := true
 
-# Temporary GPS fix. Must be called here as it fixes GPS called from
-# MSM8960-common. Works in conjunction with older d2 GPS blob
-
-common_flags += -DSET_PRIVACY
-
 # inherit from the proprietary version
 -include vendor/samsung/apexqtmo/BoardConfigVendor.mk
 # inherit from common msm8960
@@ -44,7 +39,7 @@ TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
 BOARD_KERNEL_BASE           := 0x80200000
-BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01300000
+BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
 BOARD_KERNEL_PAGESIZE       := 2048
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8260A
@@ -105,6 +100,3 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_FW_PATH_STA     :=
 WIFI_DRIVER_FW_PATH_AP      :=
 WIFI_DRIVER_FW_PATH_P2P     :=
-
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
-
