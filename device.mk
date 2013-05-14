@@ -139,6 +139,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     media.aac_51_output_enabled=true
 
+# NFC Support
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
+# NFCEE access control
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+
 # common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
 
