@@ -32,6 +32,7 @@ TARGET_OTA_ASSERT_DEVICE := apexqtmo
 
 # Kernel
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
+BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
