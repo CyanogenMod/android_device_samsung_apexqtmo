@@ -16,8 +16,10 @@
 
 ## blobs
 $(call inherit-product, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
-# inherit from common d2
--include device/samsung/d2-common/d2-common.mk
+# Inherit from d2-common
+$(call inherit-product, device/samsung/d2-common/d2-common.mk) 
+## common overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
