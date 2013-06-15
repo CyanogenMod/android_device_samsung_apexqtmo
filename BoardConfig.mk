@@ -22,8 +22,6 @@
 
 # inherit from the proprietary version
 -include vendor/samsung/apexqtmo/BoardConfigVendor.mk
-# inherit from common msm8960
--include device/samsung/msm8960-common/BoardConfigCommon.mk
 # inherit from common d2
 -include device/samsung/d2-common/BoardConfigCommon.mk
 
