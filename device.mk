@@ -20,7 +20,8 @@ $(call inherit-product, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
 $(call inherit-product, device/samsung/d2-common/d2-common.mk) 
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
-
+## overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
