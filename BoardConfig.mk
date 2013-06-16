@@ -31,12 +31,11 @@ TARGET_OTA_ASSERT_DEVICE := apexqtmo
 # Kernel
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
-
+## one day it'll have 3.4 kernel merged in to d2
+TARGET_KERNEL_SOURCE        := kernel/samsung/apeqtmo
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-## audio
-BOARD_HAVE_AUDIENCE_A2220 := false
 
 # Wifi
 BOARD_WLAN_DEVICE := qcwcn
@@ -47,6 +46,12 @@ BOARD_HAS_QCOM_WLAN := true
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
+
+# Workaround for missing symbols in camera
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+
+# We still have the old ION API
+BOARD_HAVE_OLD_ION_API := true
 # undefined
 WIFI_DRIVER_MODULE_ARG      :=
 WIFI_DRIVER_MODULE_AP_ARG   :=
@@ -55,3 +60,5 @@ WIFI_DRIVER_FW_PATH_AP      :=
 WIFI_DRIVER_FW_PATH_P2P     :=
 BOARD_HAVE_SAMSUNG_WIFI :=
 BOARD_HAVE_BLUETOOTH_BCM :=
+TARGET_USES_QCOM_COMPRESSED_AUDIO :=
+BOARD_HAVE_AUDIENCE_A2220 :=

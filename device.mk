@@ -16,8 +16,10 @@
 
 ## blobs
 $(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
+VARIENT_MODEL := apexqtmo
+VARIENT_REQUIRE_3.0_KERNEL := true
 # Inherit from d2-common
-$(call inherit-product, device/samsung/d2-common/d2-common.mk) 
+$(call inherit-product, device/samsung/d2-common/d2-common.mk)
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
 ## overlays
