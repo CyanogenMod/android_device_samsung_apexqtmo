@@ -33,6 +33,7 @@ TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
 ## one day it'll have 3.4 kernel merged in to d2
 TARGET_KERNEL_SOURCE        := kernel/samsung/apeqtmo
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -52,6 +53,10 @@ BOARD_NEEDS_MEMORYHEAPPMEM := true
 
 # We still have the old ION API
 BOARD_HAVE_OLD_ION_API := true
+
+#camera hax
+COMMON_GLOBAL_CFLAGS += -DCONFIG_MSM8960_NO_CANCEL_AUTOFOCUS
+
 # undefined
 WIFI_DRIVER_MODULE_ARG      :=
 WIFI_DRIVER_MODULE_AP_ARG   :=
