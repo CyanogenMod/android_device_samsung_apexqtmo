@@ -27,9 +27,10 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Audio configuration
+# media configuration
 PRODUCT_COPY_FILES += \
-    device/samsung/apexqtmo/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x 
+    device/samsung/apexqtmo/configs/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/samsung/apexqtmo/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Hardware keyboard
 PRODUCT_COPY_FILES += \
