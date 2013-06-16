@@ -19,8 +19,7 @@ VARIENT_MODEL := apexqtmo
 VARIENT_REQUIRE_3.0_KERNEL := true
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
-# Inherit from d2-common
-$(call inherit-product, device/samsung/d2-common/d2-common.mk)
+
 
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
@@ -36,3 +35,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
     device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm
+
+# Inherit from d2-common
+$(call inherit-product, device/samsung/d2-common/d2-common.mk)
