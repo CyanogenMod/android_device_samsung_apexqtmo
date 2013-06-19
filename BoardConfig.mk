@@ -48,12 +48,6 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
 
-# Workaround for missing symbols in camera
-BOARD_NEEDS_MEMORYHEAPPMEM := true
-
-# We still have the old ION API
-BOARD_HAVE_OLD_ION_API := true
-
 #camera hax
 COMMON_GLOBAL_CFLAGS += -DCONFIG_MSM8960_NO_CANCEL_AUTOFOCUS
 
@@ -66,3 +60,13 @@ WIFI_DRIVER_FW_PATH_P2P     :=
 BOARD_HAVE_SAMSUNG_WIFI :=
 BOARD_HAVE_BLUETOOTH_BCM :=
 BOARD_HAVE_AUDIENCE_A2220 :=
+
+ifeq ($(VARIENT_REQUIRE_3.0_KERNEL),true)
+## 3.0 kernel defines
+# Workaround for missing symbols in camera
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+# We still have the old ION API
+BOARD_HAVE_OLD_ION_API := true
+# Use regular media driver variant for 8960
+TARGET_QCOM_MEDIA_VARIANT :=
+endif
