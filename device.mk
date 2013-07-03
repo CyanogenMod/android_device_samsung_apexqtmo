@@ -37,5 +37,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
     device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm
 
+#Apexq scripts
+PRODUCT_PACKAGES += \
+    50bluetooth \
+    60compass \
+    wifimac.sh
+
 # Inherit from d2-common
 $(call inherit-product, device/samsung/d2-common/d2-common.mk)
