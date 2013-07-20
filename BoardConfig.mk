@@ -51,6 +51,9 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
 
+#Audio
+BOARD_USES_SEPERATED_VOICE_SPEAKER := true
+
 #camera hax
 COMMON_GLOBAL_CFLAGS += -DCONFIG_MSM8960_NO_CANCEL_AUTOFOCUS
 
