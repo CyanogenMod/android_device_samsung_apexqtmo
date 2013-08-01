@@ -13,7 +13,7 @@
   },
   {
     "repository": "android_kernel_samsung_apexqtmo",
-    "target_path": "kernel/samsung/apexqtmo"
+    "target_path": "kernel/samsung/d2"
   },
   {
     "repository": "android_hardware_samsung",
