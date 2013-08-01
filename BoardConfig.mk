@@ -53,7 +53,6 @@ WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
 
 #Audio
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
-BOARD_HAVE_AUDIENCE_A2220 := false
 BOARD_USES_FLUENCE_INCALL := false
 
 #camera hax
