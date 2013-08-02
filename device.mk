@@ -41,7 +41,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     50bluetooth \
     60compass \
-    wifimac.sh
+    wifimac.sh \
+    camera.MSM8960
 
 # Inherit from d2-common
 $(call inherit-product, device/samsung/d2-common/d2-common.mk)
