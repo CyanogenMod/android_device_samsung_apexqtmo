@@ -37,6 +37,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
     device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.fluence.mode=none \
+    persist.audio.handset.mic=analog \
+    ro.qc.sdk.audio.fluencetype=none
+
 #Apexq scripts
 PRODUCT_PACKAGES += \
     50bluetooth \
