@@ -24,5 +24,6 @@
     <bool name="needsEarlyVideoSize">true</bool>
     <bool name="noFaceDetectOnFrontCamera">true</bool>
     <bool name="wantsFocusModes">true</bool>
+    <bool name="useVideoSizeForPreview">true</bool>
 </resources>
 
