@@ -2714,6 +2714,30 @@ SectionDevice
 EndSection
 
 SectionDevice
+    Name "VOIP Earpiece"
+    Comment "Handset Rx device for VOIP call"
+
+    EnableSequence
+        'SLIM_0_RX Channels':0:One
+        'RX1 MIX1 INP1':0:RX1
+        'EAR PA Gain':0:POS_2_DB
+        'DAC1 Switch':1:1
+        'RX1 Digital Volume':2:69.3%
+    EndSequence
+
+    DisableSequence
+        'RX1 MIX1 INP1':0:ZERO
+        'DAC1 Switch':1:0
+        'EAR PA Gain':0:ZERO
+        'RX1 Digital Volume':1:0
+    EndSequence
+
+    ACDBID  7:1
+    EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "Voice Earpiece Extra Gain"
 	Comment "Handset Rx device for voice call with extra gain"
 
@@ -2840,6 +2864,32 @@ SectionDevice
 
 EndSection
 
+SectionDevice
+    Name "VOIP Speaker"
+    Comment "VoIP Comm Speaker RX device"
+
+    EnableSequence
+        'SLIM_0_RX Channels':0:Two
+        'RX5 MIX1 INP1':0:RX1
+        'RX5 MIX1 INP2':0:RX2
+        'RX6 DSM MUX':0:DSM_INV
+        'LINEOUT2 Volume':1:100%
+        'LINEOUT4 Volume':1:100%
+        'RX5 Digital Volume':2:67.7%
+    EndSequence
+
+    DisableSequence
+        'RX5 MIX1 INP1':0:ZERO
+        'RX5 MIX1 INP2':0:ZERO
+        'LINEOUT2 Volume':1:0
+        'LINEOUT4 Volume':1:0
+        'RX5 Digital Volume':1:0
+    EndSequence
+
+    ACDBID  15:1
+    EffectsMixerCTL "SRS TruMedia"
+
+EndSection
 
 SectionDevice
     Name "Sub Mic"
@@ -2906,6 +2956,38 @@ EndSection
 SectionDevice
     Name "Voice Headphones"
     Comment "Headset Rx device for voice call"
+
+    EnableSequence
+        'SLIM_0_RX Channels':0:Two
+        'RX1 MIX1 INP1':0:RX1
+        'RX2 MIX1 INP1':0:RX2
+        'HPHL DAC Switch':1:1
+        'HPHR DAC Switch':1:1
+        'HPHL Volume':1:100%
+        'HPHR Volume':1:100%
+        'RX1 Digital Volume':2:67.7%
+        'RX2 Digital Volume':2:67.7%
+    EndSequence
+
+    DisableSequence
+        'RX1 MIX1 INP1':0:ZERO
+        'RX2 MIX1 INP1':0:ZERO
+        'HPHL DAC Switch':1:0
+        'HPHR DAC Switch':1:0
+        'HPHL Volume':1:0
+        'HPHR Volume':1:0
+        'RX1 Digital Volume':1:0
+        'RX2 Digital Volume':1:0
+    EndSequence
+
+    ACDBID  10:1
+    EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
+    Name "VOIP Headphones"
+    Comment "VoIP Comm Headset Rx device"
 
     EnableSequence
         'SLIM_0_RX Channels':0:Two
@@ -3147,6 +3229,52 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "Voice Headset"
+	Comment "Call Headset Tx device"
+
+    EnableSequence
+        'SLIM_0_TX Channels':0:One
+        'SLIM TX7 MUX':0:DEC5
+        'DEC5 MUX':0:ADC2
+        'ADC2 Volume':1:100%
+        'DEC5 Volume':2:67.7%
+    EndSequence
+
+    DisableSequence
+        'SLIM TX7 MUX':0:ZERO
+        'DEC5 MUX':0:ZERO
+        'ADC2 Volume':1:0
+    EndSequence
+
+	ACDBID	8:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
+	Name "VOIP Headset"
+	Comment "VoIP Comm Headset Tx device"
+
+    EnableSequence
+        'SLIM_0_TX Channels':0:One
+        'SLIM TX7 MUX':0:DEC5
+        'DEC5 MUX':0:ADC2
+        'ADC2 Volume':1:100%
+        'DEC5 Volume':2:67.7%
+    EndSequence
+
+    DisableSequence
+        'SLIM TX7 MUX':0:ZERO
+        'DEC5 MUX':0:ZERO
+        'ADC2 Volume':1:0
+    EndSequence
+
+	ACDBID	59:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "Handset"
 	Comment "Handset Tx device"
 
@@ -3308,6 +3436,56 @@ SectionDevice
     EndSequence
 
     ACDBID  4:2
+
+EndSection
+
+SectionDevice
+	Name "VOIP Handset"
+	Comment "VoIP Comm Main Mic Tx device"
+
+    EnableSequence
+        'SLIM_0_TX Channels':0:One
+        'SLIM TX7 MUX':0:DEC4
+        'DEC4 MUX':0:ADC3
+        'ADC3 Volume':1:100%
+        'DEC4 Volume':1:67.7%
+        'MICBIAS1 CAPLESS Switch':1:1
+    EndSequence
+
+    DisableSequence
+        'SLIM TX7 MUX':0:ZERO
+        'DEC4 MUX':0:ZERO
+        'ADC3 Volume':1:0
+	'DEC4 Volume':1:67%
+        'MICBIAS1 CAPLESS Switch':1:0
+    EndSequence
+
+    ACDBID  57:2
+
+EndSection
+
+SectionDevice
+	Name "VOIP Line"
+	Comment "VoIP Comm Main Mic Tx device"
+
+    EnableSequence
+        'SLIM_0_TX Channels':0:One
+        'SLIM TX7 MUX':0:DEC4
+        'DEC4 MUX':0:ADC3
+        'ADC3 Volume':1:100%
+        'DEC4 Volume':1:67.7%
+        'MICBIAS1 CAPLESS Switch':1:1
+    EndSequence
+
+    DisableSequence
+        'SLIM TX7 MUX':0:ZERO
+        'DEC4 MUX':0:ZERO
+        'ADC3 Volume':1:0
+	'DEC4 Volume':1:67%
+        'MICBIAS1 CAPLESS Switch':1:0
+    EndSequence
+
+    ACDBID  57:2
 
 EndSection
 
