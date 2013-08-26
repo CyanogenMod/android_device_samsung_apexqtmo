@@ -27,4 +27,6 @@
     <!-- We dont have different firmware for wifi modes, prevent reloading it -->
     <bool name="config_wifiApFirmwareReload">false</bool>
 
+    <integer name="config_keyboardBrightnessSettingDefault">1</integer>
+
 </resources>
