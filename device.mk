@@ -16,10 +16,8 @@
 
 $(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
 VARIENT_MODEL := apexqtmo
-#VARIENT_REQUIRE_3.0_KERNEL := true
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
-
 
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
@@ -27,7 +25,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# media configuration
+# Media configuration
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/configs/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
     device/samsung/d2-common/camera/media_profiles.xml:system/etc/media_profiles.xml
@@ -42,12 +40,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.handset.mic=analog \
     ro.qc.sdk.audio.fluencetype=none
 
-#Apexq scripts
+# Apexq scripts
 PRODUCT_PACKAGES += \
     50bluetooth \
     60compass \
     wifimac.sh \
     camera.MSM8960
+
+# Wifi firmware
+PRODUCT_PACKAGES += \
+    WCNSS_cfg.dat \
+    WCNSS_qcom_cfg.ini \
+    WCNSS_qcom_wlan_nv.bin_
 
 # Inherit from d2-common
 $(call inherit-product, device/samsung/d2-common/d2-common.mk)
