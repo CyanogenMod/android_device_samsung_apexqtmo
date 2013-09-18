@@ -25,4 +25,6 @@ lib/hw/camera.msm8960.so:lib/hw/vendor-camera.msm8960.so
 lib/hw/sensors.msm8960.so
 lib/libmmjpeg.so
 lib/liboemcamera.so
+lib/libril-qc-qmi-1.so
+lib/libril.so
 vendor/firmware/libpn544_fw.so
