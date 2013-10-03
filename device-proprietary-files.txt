@@ -21,7 +21,7 @@ lib/libimage-omx-common.so
 lib/libaudioalsa.so
 lib/libaudioparsers.so
 lib/libcsd-client.so
-lib/hw/camera.msm8960.so:lib/hw/vendor-camera.msm8960.so
+lib/hw/vendor-camera.msm8960.so
 lib/hw/sensors.msm8960.so
 lib/libmmjpeg.so
 lib/liboemcamera.so
