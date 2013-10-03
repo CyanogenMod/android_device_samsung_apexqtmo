@@ -30,7 +30,8 @@ PRODUCT_COPY_FILES += \
 # Hardware keyboard
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
-    device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm
+    device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
+    device/samsung/apexqtmo/keyboard/sec_keypad.idc:system/usr/idc/sec_keypad.idc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.mode=none \
