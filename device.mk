@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/configs/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
     device/samsung/d2-common/camera/media_profiles.xml:system/etc/media_profiles.xml
 
+# Boot Logo
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/configs/initlogo.rle:root/initlogo.rle
+
 # Hardware keyboard
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
