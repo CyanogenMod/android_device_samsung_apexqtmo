@@ -20,7 +20,7 @@ VARIENT_MODEL := apexqtmo
 DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 
 ## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
+#DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
 
 # Media configuration
 PRODUCT_COPY_FILES += \
