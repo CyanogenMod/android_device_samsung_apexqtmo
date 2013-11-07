@@ -17,7 +17,6 @@
 #
 
 keyboard.orientationAware = 0
-keyboard.builtIn = 1
 
 cursor.mode = navigation
 cursor.orientationAware = 0
