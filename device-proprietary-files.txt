@@ -14,8 +14,9 @@ etc/firmware/wcnss.b05
 etc/firmware/wcnss.mdt
 etc/hostapd/hostapd.accept
 etc/hostapd/hostapd.deny
-etc/hostapd/hostapd_default.conf 
+etc/hostapd/hostapd_default.conf
 bin/btnvtool
+bin/geomagneticd
 bin/hci_qcomm_init
 bin/sec-ril
 lib/libimage-jpeg-dec-omx-comp.so
