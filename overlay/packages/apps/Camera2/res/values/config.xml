@@ -19,11 +19,5 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <bool name="enableZSL">false</bool>
-    <bool name="needsSamsungCamMode">true</bool>
-    <bool name="hasSamsungCamSettings">true</bool>
-    <bool name="needsEarlyVideoSize">true</bool>
-    <bool name="noFaceDetectOnFrontCamera">true</bool>
-    <bool name="wantsFocusModes">true</bool>
-    <bool name="useVideoSizeForPreview">true</bool>
 </resources>
 
