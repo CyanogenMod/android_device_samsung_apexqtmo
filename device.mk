@@ -41,7 +41,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.mode=none \
     persist.audio.handset.mic=analog \
-    ro.qc.sdk.audio.fluencetype=none
+    ro.qc.sdk.audio.fluencetype=none \
+    ro.qualcomm.bt.hci_transport=smd
 
 # Apexq scripts
 PRODUCT_PACKAGES += \
@@ -55,5 +56,5 @@ PRODUCT_PACKAGES += \
     WCNSS_qcom_cfg.ini \
     WCNSS_qcom_wlan_nv.bin_
 
-# Inherit from d2-common
-$(call inherit-product, device/samsung/d2-common/d2-common.mk)
+# d2-common
+$(call inherit-product, device/samsung/d2lte/d2-common.mk)

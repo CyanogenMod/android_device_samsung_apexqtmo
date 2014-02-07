@@ -4,4 +4,4 @@ set -e
 
 export DEVICE=apexqtmo
 export VENDOR=samsung
-./../d2-common/extract-files.sh $@
+./../d2lte/extract-files.sh $@
