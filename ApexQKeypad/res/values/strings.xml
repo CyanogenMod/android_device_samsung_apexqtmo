@@ -14,8 +14,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="app_name">ApexQ Keypad</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ApexQ keypad</string>
     <string name="keyboard_layouts_label">Relay keypad</string>
     <string name="keypad_apexq_qwerty_label">ApexQ QWERTY</string>
 </resources>
