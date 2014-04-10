@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources>
-  <string name="app_name">Klávesnice ApexQ</string>
-  <string name="keyboard_layouts_label">Klávesnice Relay</string>
+  <string name="app_name">Klawiatura ApexQ</string>
+  <string name="keyboard_layouts_label">Klawiatura Relay</string>
   <string name="keypad_apexq_qwerty_label">ApexQ QWERTY</string>
 </resources>
