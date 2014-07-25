@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,62 +20,54 @@
 # definition file).
 #
 
+# inherit from common msm8960
+-include device/samsung/msm8960-common/BoardConfigCommon.mk
+
 # inherit from the proprietary version
 -include vendor/samsung/apexqtmo/BoardConfigVendor.mk
-# inherit from common d2
--include device/samsung/d2lte/BoardConfigCommon.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := apexqtmo
 TARGET_BOARD_INFO_FILE ?= device/samsung/apexqtmo/board-info.txt
 
-# Insert contents of file near end of updater-script
-#TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./build/tools/releasetools/ota_from_target_files -e ./device/samsung/d2lte/apexq-common/installer_extra
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Kernel
-TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
-BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
-TARGET_KERNEL_SOURCE        := kernel/samsung/d2
+TARGET_KERNEL_CONFIG := cyanogen_apexq_defconfig
 
-# We are not a unified device :(
-TARGET_UNIFIED_DEVICE :=
-TARGET_INIT_VENDOR_LIB :=
-TARGET_LIBINIT_DEFINES_FILE :=
+# Audio
+BOARD_HAVE_DOCK_USBAUDIO := true
+BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
+BOARD_USES_SEPERATED_AUDIO_INPUT := true
+BOARD_USES_SEPERATED_VOICE_SPEAKER := true
+BOARD_USES_SEPERATED_VOIP := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/apexqtmo/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF :=
-BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY :=
-BOARD_HAVE_BLUETOOTH_BCM :=
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
+# Camera
+TARGET_NEED_DISABLE_AUTOFOCUS := true
+TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
+TARGET_NEED_PREVIEW_SIZE_FIXUP := true
+
 # Wifi
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
-BOARD_HAVE_SAMSUNG_WIFI :=
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
-
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_${BOARD_WLAN_DEVICE}
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_${BOARD_WLAN_DEVICE}
+WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
-WIFI_DRIVER_MODULE_ARG      :=
-WIFI_DRIVER_MODULE_AP_ARG   :=
 WIFI_DRIVER_FW_PATH_STA     := "sta"
 WIFI_DRIVER_FW_PATH_AP      := "ap"
-WIFI_DRIVER_FW_PATH_P2P     :=
 
-#Audio
-BOARD_HAVE_AUDIENCE_A2220 :=
-BOARD_USES_SEPERATED_VOICE_SPEAKER := true
-BOARD_USES_FLUENCE_INCALL := false
-BOARD_USES_FLUENCE_FOR_VOIP := false
-
-# Camera
-TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
-TARGET_NEED_DISABLE_AUTOFOCUS := true
-# TARGET_NEED_PREVIEW_SIZE_FIXUP := true
-
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/apexqtmo

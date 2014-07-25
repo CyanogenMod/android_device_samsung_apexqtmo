@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,48 +15,57 @@
 #
 
 $(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
+
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 
-## common overlays
-#DEVICE_PACKAGE_OVERLAYS += device/samsung/d2-common/overlay-gsm
+# Boot animation and screen size
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 
-# Media configuration
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    50bluetooth \
+    60compass \
+    init.target.rc \
+    wifimac.sh
+
+# Audio configuration
 PRODUCT_COPY_FILES += \
-    device/samsung/apexqtmo/configs/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
-    device/samsung/apexqtmo/media/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/apexqtmo/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/samsung/apexqtmo/audio/audio_policy.conf:system/etc/audio_policy.conf
 
-# Boot Logo
-PRODUCT_COPY_FILES += \
-    device/samsung/apexqtmo/configs/initlogo.rle:root/initlogo.rle
-
-# Hardware keyboard
+# Keylayout
 PRODUCT_COPY_FILES += \
     device/samsung/apexqtmo/keyboard/sec_keypad.kl:system/usr/keylayout/sec_keypad.kl \
     device/samsung/apexqtmo/keyboard/sec_keypad.kcm:system/usr/keychars/sec_keypad.kcm \
     device/samsung/apexqtmo/keyboard/sec_keypad.idc:system/usr/idc/sec_keypad.idc
+
 PRODUCT_PACKAGES += \
     ApexQKeypad
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.fluence.mode=none \
-    persist.audio.handset.mic=analog \
-    ro.qc.sdk.audio.fluencetype=none \
-    ro.qualcomm.bt.hci_transport=smd \
-    telephony.lteOnGsmDevice=0 \
-    ro.telephony.default_network=0
+# Logo
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/initlogo.rle:root/initlogo.rle
 
-# Apexq scripts
-PRODUCT_PACKAGES += \
-    50bluetooth \
-    60compass \
-    wifimac.sh
+# Media configuration
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/media/media_profiles.xml:system/etc/media_profiles.xml
 
-# Wifi firmware
+# Wifi
+PRODUCT_COPY_FILES += \
+    device/samsung/apexqtmo/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/samsung/apexqtmo/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+
 PRODUCT_PACKAGES += \
     WCNSS_cfg.dat \
     WCNSS_qcom_cfg.ini \
-    WCNSS_qcom_wlan_nv.bin_
+    WCNSS_qcom_wlan_nv.bin
 
-# d2-common
-$(call inherit-product, device/samsung/d2lte/d2-common.mk)
+# common msm8960
+$(call inherit-product, device/samsung/msm8960-common/msm8960.mk)

@@ -1,0 +1,16 @@
+on post-fs-data
+    write /dev/wcnss_wlan 1
+    write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
+    write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.serialno}
+
+on boot
+    exec /system/bin/btnvtool -O
+    chown bluetooth bluetooth /efs/bluetooth/bt_addr
+
+# Services start here
+
+service geomagneticd /system/bin/geomagneticd
+    class main
+    user compass
+    group system input
+    disabled

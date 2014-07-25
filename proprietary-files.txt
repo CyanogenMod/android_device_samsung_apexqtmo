@@ -1,0 +1,46 @@
+# Audio
+lib/libaudioalsa.so
+lib/libaudioparsers.so
+
+# Bluetooth
+bin/btnvtool
+bin/hci_qcomm_init
+lib/libbtnv.so
+
+# Camera
+lib/hw/camera.vendor.msm8960.so
+lib/libchromatix_s5k3l1yx_default_video.so
+lib/libchromatix_s5k3l1yx_preview.so
+lib/libchromatix_s5k3l1yx_video_hd.so
+lib/libchromatix_s5k3l1yx_zsl.so
+lib/libimage-jpeg-dec-omx-comp.so
+lib/libimage-jpeg-enc-omx-comp.so
+lib/libimage-omx-common.so
+lib/libmmjpeg.so
+lib/liboemcamera.so
+
+# NFC
+vendor/firmware/libpn544_fw.so
+
+# Radio
+bin/sec-ril
+lib/libril-qc-qmi-1.so
+lib/libril.so
+
+# Sensors
+bin/geomagneticd
+lib/hw/sensors.msm8960.so
+
+# Wifi
+etc/hostapd/hostapd.accept
+etc/hostapd/hostapd.deny
+etc/hostapd/hostapd_default.conf
+etc/wifi/wpa_supplicant.conf
+
+# Wifi Firmware
+etc/firmware/wcnss.b00
+etc/firmware/wcnss.b01
+etc/firmware/wcnss.b02
+etc/firmware/wcnss.b04
+etc/firmware/wcnss.b05
+etc/firmware/wcnss.mdt
