@@ -14,3 +14,6 @@ service geomagneticd /system/bin/geomagneticd
     user compass
     group system input
     disabled
+
+service netmgrd /system/bin/netmgrd
+    class main
