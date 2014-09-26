@@ -1,11 +1,19 @@
+# CPU
+bin/thermald
+bin/mpdecision
+etc/thermald.conf
+lib/libcordon.so
+lib/libqc-opt.so
+
 # Audio
+lib/libacdbloader.so
+lib/libaudcal.so
 lib/libaudioalsa.so
-lib/libaudioparsers.so
+lib/libcsd-client.so
 
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
-lib/libbtnv.so
 
 # Camera
 lib/hw/camera.vendor.msm8960.so
@@ -13,23 +21,65 @@ lib/libchromatix_s5k3l1yx_default_video.so
 lib/libchromatix_s5k3l1yx_preview.so
 lib/libchromatix_s5k3l1yx_video_hd.so
 lib/libchromatix_s5k3l1yx_zsl.so
+lib/libgemini.so
 lib/libimage-jpeg-dec-omx-comp.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_statsproc30.so
 lib/libmmjpeg.so
+lib/libmmstillomx.so
 lib/liboemcamera.so
 
 # NFC
+lib/hw/nfc.msm8960.so
 vendor/firmware/libpn544_fw.so
 
+# QMI
+lib/libqdi.so
+lib/libqdp.so
+lib/libqmi_client_qmux.so
+
+# GPS
+etc/gps.conf
+lib/libgeofence.so
+lib/hw/gps.default.so
+lib/libgps.utils.so
+lib/libloc_adapter.so
+lib/libloc_api_v02.so
+lib/libloc_eng.so
+
 # Radio
+bin/netmgrd
+bin/qmuxd
+bin/radish
+bin/rild
+bin/rmt_storage
 bin/sec-ril
+lib/libdiag.so
+lib/libdsi_netctrl.so
+lib/libdsutils.so
+lib/libidl.so
+lib/libnetmgr.so
+lib/libqcci_legacy.so
+lib/libqmi_cci.so
+lib/libqmi_client_qmux.so
+lib/libqmi_common_so.so
+lib/libqmi_csi.so
+lib/libqmi_encdec.so
+lib/libqmiservices.so
+lib/libqmi.so
 lib/libril-qc-qmi-1.so
+lib/libril-qcril-hook-oem.so
 lib/libril.so
 
 # Sensors
 bin/geomagneticd
 lib/hw/sensors.msm8960.so
+lib/libakmd.so
+lib/libinvensense_hal.so
+lib/libmllite.so
+lib/libmlplatform.so
 
 # Wifi
 etc/hostapd/hostapd.accept
