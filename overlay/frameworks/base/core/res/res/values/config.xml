@@ -21,15 +21,7 @@
      for different hardware and product builds. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Workaround for devices with broken keyboards -->
-    <bool name="config_forceDisableHardwareKeyboard">false</bool>
-
     <bool name="config_enableWifiDisplay">true</bool>
-
-    <!-- We dont have different firmware for wifi modes, prevent reloading it -->
-    <bool name="config_wifiApFirmwareReload">false</bool>
-
-    <integer name="config_keyboardBrightnessSettingDefault">1</integer>
 
     <!-- Indicate whether the lid state impacts the accessibility of
         the physical keyboard. 0 means it doesn't, 1 means it is accessible
@@ -71,12 +63,6 @@
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
         <item>"bt-pan"</item>
     </string-array>
-
-    <!-- We dont have different firmware for wifi modes, prevent reloading it -->
-    <bool name="config_wifiApFirmwareReload">false</bool>
-
-    <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
