@@ -23,6 +23,9 @@
 # inherit from common msm8960
 -include device/samsung/msm8960-common/BoardConfigCommon.mk
 
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 5515509760
+
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/apexqtmo/include
 
 # inherit from the proprietary version
