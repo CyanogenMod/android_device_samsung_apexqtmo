@@ -23,6 +23,8 @@
 
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <integer name="config_keyboardBrightnessSettingDefault">1</integer>
+
     <!-- Indicate whether the lid state impacts the accessibility of
         the physical keyboard. 0 means it doesn't, 1 means it is accessible
         when the lid is open, 2 means it is accessible when the lid is
@@ -63,6 +65,9 @@
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
         <item>"bt-pan"</item>
     </string-array>
+
+    <!-- We dont have different firmware for wifi modes, prevent reloading it -->
+    <bool name="config_wifiApFirmwareReload">false</bool>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
